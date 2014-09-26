@@ -11,9 +11,8 @@ except ImportError:
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
-requirements = [
-    # TODO: put package requirements here
-]
+requirements = [line.strip() for line in open('requirements.txt')
+                              .readlines()]
 
 test_requirements = [
     # TODO: put package test requirements here
@@ -21,7 +20,7 @@ test_requirements = [
 
 setup(
     name='slinky',
-    version='0.1.0',
+    version='0.1.1',
     description='Quick command to create signed links on S3',
     long_description=readme + '\n\n' + history,
     author='Ben Hughes',
