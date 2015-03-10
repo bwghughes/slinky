@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='slinky',
-    version='0.1.1',
+    version='0.1.2',
     description='Quick command to create signed links on S3',
     long_description=readme + '\n\n' + history,
     author='Ben Hughes',
